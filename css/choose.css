@@ -1,0 +1,69 @@
+.b-choice{
+    position: absolute;
+    top:1198px;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    height: 570px;
+}
+.b-choice h2{
+    font-size: 30px;
+    padding: 31px 24px;
+}
+.b-choice .notice{
+    position: relative;
+    width: 1000px;
+    height: 499px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg.png") repeat-x;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_ie.png") repeat-x;
+}
+.b-choice .notice .left-bg,
+.b-choice .notice .right-bg{
+    position: absolute;
+    left: 0;
+    top: 91px;
+    width: 1px;
+    height: 499px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_01.png") repeat-x;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_01_ie.png") repeat-x;
+}
+.b-choice .notice .right-bg{
+    left: 999.5px;
+}
+.b-choice .notice .notice-tit{
+    height: 91px;
+    color: #83f4f3;
+    font-size: 24px;
+    font-style: italic;
+}
+.b-choice .notice .notice-tit li{
+    float: left;
+    width: 198px;
+    height: 91px;
+    padding: 0 1px;
+    text-align: center;
+}
+.b-choice .notice .notice-tit a{
+    display: inline-block;
+    float: left;
+    width: 198px;
+    height: 89px;
+    padding: 1px;
+    text-align: center;
+}
+.b-choice .notice .notice-tit a:hover{
+    padding: 0;
+    border-top: 1px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.b-choice .notice .notice-tit .month,
+.b-choice .notice .notice-tit .howlong,
+.b-choice .notice .notice-tit .partner,
+.b-choice .notice .notice-tit .amusement,
+.b-choice .notice .notice-tit .visa{
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat;
+}

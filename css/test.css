@@ -1,0 +1,101 @@
+.b-test{
+    position: relative;
+    width: 100%;
+    min-height: 10.66rem;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150114_PC/test_bg.jpg") no-repeat 0 bottom;
+    background-size: 100%;
+}
+.b-test h2{
+    position: absolute;
+    left: 4.5rem;
+    top: 1.6rem;
+    font-size: 0.85rem;
+    color: #b9942c;
+    text-align: center;
+}
+.test_content{
+    width: 100%;
+    min-height: 14.9rem;
+}
+.b-test .test_content .question{
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+}
+.test_content .question .subject{
+    position: relative;
+    color: #333;
+    font-size: 0.64rem;
+}
+.test_content .question .subject .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0.6rem 0 1rem;
+    width: 100%;
+    min-width: 0.85rem;
+    line-height: 1rem;
+    box-sizing: border-box;
+}
+.test_content .question .subject .option{
+    position: absolute;
+    left: 2rem;
+    font-size: 0.853rem;
+    cursor: pointer;
+}
+.test_content .question .subject .circle{
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 0.64rem;
+    height: 0.64rem;
+    border-radius: 0.32rem;
+    background: #fff;
+    border: 1px solid #b9942c;
+    box-sizing: border-box;
+}
+.test_content .question .subject .active{
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 0.64rem;
+    height: 0.64rem;
+    border-radius: 0.32rem;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #b9942c;
+}
+.test_content .question .subject .active:before{
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    z-index: 1;
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    background: #b9942c;
+    border-radius: 0.22rem;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.subject .option:nth-of-type(1){top: 2.4rem;}
+.subject .option:nth-of-type(2){top: 3.9rem;}
+.subject .option:nth-of-type(3){top: 5.4rem;}
+.subject .option:nth-of-type(4){top: 6.9rem;}
+.test_content .next{
+    position: absolute;
+    bottom: 1.6rem;
+    left: 3.8rem;
+    min-width: 8.53rem;
+    padding: 0 0.9rem;
+    height: 1.49rem;
+    border: none;
+    border-radius: 0.1rem;
+    background: #ff7f4d;
+    font-size: 0.853rem;
+    color: #fff;
+    font-family: "microsoft yahei";
+}
+.test_content .last{
+    left: 1.9rem;
+    cursor: pointer;
+}
