@@ -112,7 +112,6 @@ $(document).ready(function(){
     });
 
     $next.on(' click', function(e){
-        e.preventDefault();
         if($(".active").length == 0){
             return;
         }
@@ -126,35 +125,34 @@ $(document).ready(function(){
             $share.show();
             $next.hide();
         }
+        return false;
     });
     $share.on(' click', function(e){
-        e.preventDefault();
         if($(".active").length == 0){
             return;
         }
         $dialogmask.show();
+        //$testbg.hide();
         window.best = Input_result.getBest();
+        return false;
     });
 
     $shareDialog.on(' click',function(e){
-        e.preventDefault();
-        $dialogmask .hide();
-
-        $headerinfo.html("<p class='result'>经过测算，最适合你的海岛是</p>");
+        $dialogmask.hide();
         $testbg.hide();
-
         var island_pic = window.template($('#island_pic').html())({
             name: best,
             reason : exersize_result[best]['reason'],
+            share : exersize_result[best]['share'],
             img : exersize_result[best]['img']
         });
-        $('.island-pic').html(island_pic);
+        $('.test-result').html(island_pic);
         $resultcontent.show();
+        return false;
     });
 
-    function option_click(e){
-        e.preventDefault();
 
+    function option_click(e){
         var target = $(e.currentTarget).find('.circle');
         var allcircle = target.parents('.subject').find('.circle');
         var result = target.parents('.option').data('island').split(',');
@@ -167,6 +165,7 @@ $(document).ready(function(){
             Input_result.add(result[i]);
         }
         target.addClass('active');
+        return false;
     }
 
     /***  事件处理 END ****/

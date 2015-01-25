@@ -7,6 +7,22 @@
     height: 450px;
     background: url("../150115_PC/test_bg.jpg") no-repeat 0 bottom;
 }
+.bg_left{
+    position: absolute;
+    width: 341px;
+    height: 400px;
+    left: -52px;
+    bottom: -22px;
+    background: url("../150115_PC/test_left.png") no-repeat;
+}
+.bg_right{
+    position: absolute;
+    width: 268px;
+    height: 390px;
+    right: -48px;
+    bottom: -52px;
+    background: url("../150115_PC/test_right.png") no-repeat;
+}
 .b-test h2{
     padding-top: 28px;
     font-size: 40px;

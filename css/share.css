@@ -1,0 +1,37 @@
+.share-wrapper{
+	position: absolute;
+	width: 120%;
+	height: 100%;
+	background: rgba(1, 199, 198, 0.4);
+	top: 0;
+	left: -60px;
+}
+.share-window{
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	left: 360px;
+	top: 116px;
+	background: #fff;
+}
+
+.share-window ul{
+	margin-top: 86px;
+	padding: 0;
+	margin-left: 67px;
+}
+
+.share-window ul li{
+	float: left;
+	margin-left: 15px;
+	color: #1badb6;
+	line-height: 1.5;
+	font-size: 25px;
+	font-weight: 100;
+	cursor: pointer;
+}
+
+.share-window ul li.title{
+	position: relative;
+	top: 2px;
+}

@@ -12,6 +12,8 @@
     <link href="css/comment.css" rel="stylesheet" type="text/css" />
     <link href="css/recommend.css" rel="stylesheet" type="text/css" />
     <link href="css/right_slide.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/result.css"/>
+    <link rel="stylesheet" href="css/share.css"/>
     <link rel="stylesheet" href="css/bottom.css"/>
     <!--[if IE 6]>
     <script type="text/javascript" src="http://qunarzz.com/js/compatibilityUtils/build/DD_belatedPNG-min.js"></script>
@@ -164,19 +166,41 @@
         </div>
     </div>
     <div class="b-test">
-        <h2>测测你的专属海岛</h2>
-        <div class="test_content">
-            <div class="question" id="question">
-                <dl class="subject">
-                    <dt class="title">1、在纪念品店看到漂亮海星，你会送给谁？</dt>
-                    <dd class="option"><span class="circle active"></span>爱人</dd>
-                    <dd class="option"><span class="circle"></span>父母</dd>
-                    <dd class="option"><span class="circle"></span>孩子</dd>
-                    <dd class="option"><span class="circle"></span>朋友</dd>
-                </dl>
+        <div class="bg_left"></div>
+        <div class="bg_right"></div>
+        <div class="test-content" id="test_bg">
+            <h2>测测你的专属海岛</h2>
+            <div class="test_content">
+                <div class="question" id="question">
+                    <dl class="subject">
+                        <dt class="title">1、在纪念品店看到漂亮海星，你会送给谁？</dt>
+                        <dd class="option"><span class="circle active"></span>爱人</dd>
+                        <dd class="option"><span class="circle"></span>父母</dd>
+                        <dd class="option"><span class="circle"></span>孩子</dd>
+                        <dd class="option"><span class="circle"></span>朋友</dd>
+                    </dl>
+                </div>
+                <button class="next" id="next">下一题</button>
+                <button class="next last" id="share" style="display: none;">分享测试 查看我的专属海岛</button>
             </div>
-            <button class="next" id="next">下一题</button>
-            <button class="next last" id="share" style="display: none;">分享测试 查看我的专属海岛</button>
+        </div>
+        <div class="share-wrapper" style="display: none;" id="dialog-mask">
+            <div class="share-window">
+                <ul>
+                    <li class="title">分享测试: </li>
+                    <li><img class="dialog-share" src="150115_PC/sina.png" alt=""/></li>
+                    <li><img class="dialog-share" src="150115_PC/qq_microblog.png" alt=""/></li>
+                    <li><img class="dialog-share" src="150115_PC/qq_zone.png" alt=""/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="test-result" id="result-content" style="display: none;">
+            <h1>最适合你的海岛是</h1>
+            <img src="150115_PC/Seychelles.png" alt=""/>
+            <div class="content">
+                <p>流弊轰轰， 人品爆发</p>
+                <p>要去塞舌尔想想还有点小激动呢！</p>
+            </div>
         </div>
     </div>
     <div class="b-recommend" id="recommend"></div>
@@ -287,10 +311,12 @@
 
 <!-- 测试结果模板 -->
 <script type="text/template" id="island_pic">
+    <h1>最适合你的海岛是</h1>
     <img src="<%= img %>" alt=""/>
-    <p class="name"><%= name %></p>
-    <div class="reason">推荐理由：<%= reason %></div>
-    <button class="retest">重测一次</button>
+    <div class="content">
+        <p><%= reason %> </p>
+        <p><%= share %></p>
+    </div>
 </script>
 
 <script type="text/javascript" src="js/jquery.js"></script>
