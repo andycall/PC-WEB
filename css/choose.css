@@ -3,6 +3,7 @@
     top: 0;
     left: 50%;
     margin-left: -500px;
+    padding-bottom: 50px;
     width: 1000px;
     height: 570px;
 }
@@ -35,19 +36,19 @@
 .b-choice .notice .notice-tit{
     height: 91px;
 }
-.b-choice .notice .notice-tit .item{
+.b-choice .notice .notice-tit li{
     position: relative;
     float: left;
+    cursor: pointer;
 }
-.b-choice .notice .notice-tit .item a{
+.b-choice .notice .notice-tit li .item{
     display: inline-block;
     padding: 1px 1px 0 1px;
     width: 198px;
     height: 91px;
     color: #83f4f3;
-;
 }
-.b-choice .notice .notice-tit .item a:hover{
+.b-choice .notice .notice-tit .selected .item{
     padding: 0;
     border-right: 1px solid #fff;
     border-top: 1px solid #fff;
@@ -55,7 +56,7 @@
     background-color: #6be4e4;
     color: #fff;
 }
-.b-choice .notice .notice-tit .item .tit{
+.b-choice .notice .notice-tit .tit{
     position: absolute;
     top: 15px;
     left: 128px;
@@ -63,7 +64,7 @@
     height: 36px;
     font: italic 24px/30px "microsoft yahei";
 }
-.b-choice .notice .notice-tit .item .last{
+.b-choice .notice .notice-tit .last{
     top:32px;
 }
 .b-choice .notice .notice-tit .month,

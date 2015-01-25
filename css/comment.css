@@ -1,11 +1,11 @@
 .b-comment{
     position: relative;
-    top:42px;
+    top:80px;
     left: 50%;
     margin-left: -500px;
     width: 1000px;
-    height: 615px;
     z-index: 100;
+    height: 650px;
 }
 .b_interactive {
     background-color:#ffffff;
