@@ -1,6 +1,6 @@
 .b-map{
     position: relative;
-    top:60px;
+    top: 60px;
     left: 50%;
     margin-left: -505px;
     width: 1011px;
@@ -12,7 +12,79 @@
     text-align: center;
 }
 .b-map .island-map{
+    position: relative;
     width: 1011px;
     height: 439px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/map.png") no-repeat;
+    background: url("../150115_PC/map.png") no-repeat;
+}
+
+.island-item{
+    position: absolute;
+    background: url("../150115_PC/place.png") no-repeat;
+    width: 60px;
+    height: 44px;
+    left: 200px;
+    top: 200px;
+}
+
+.island-item a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    z-index: 10000;s
+}
+
+
+.dialog{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: absolute;
+    width: 200px;
+    min-height: 384px;
+    left: 5px;
+}
+.dialog .name .place-icon{
+    line-height: 50px;
+    display: block;
+    padding-left: 10px;
+    text-indent: 25px;
+    background: url("../150115_PC/icon2.png") no-repeat;
+    background-position: 10px 50%;
+}
+
+.dialog .content{
+    position: relative;
+    width: 100%;
+
+}
+.dialog .content img{
+    width: 170px;
+    margin: 15px auto 15px auto;
+    display: block;
+}
+
+.dialog .content .essay{
+    width: 170px;
+    min-height: 132px;
+    margin: 0 auto;
+    font-size: 12px;
+    padding-bottom: 46px;
+    color: #000;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.dialog .content a{
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    right: 10px;
+    color: #01a5af;
+    text-decoration: none;
+
 }
