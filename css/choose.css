@@ -27,7 +27,7 @@
     width: 1px;
     height: 499px;
     background: url("../150115_PC/choose_bg_01.png") no-repeat;
-    _background: url("../choose_bg_01_ie.png") no-repeat;
+    _background: url("../150115_PC/choose_bg_01_ie.png") no-repeat;
 }
 .b-choice .notice .right-bg{
     left: 999px;
@@ -94,4 +94,34 @@
 }
 .b-choice .notice .notice-tit .visa {
     background-position: -25px -658px;
+}
+.b-choice .notice .main-content{
+    width: 1000px;
+    height: 408px;
+}
+.b-choice .notice .main-content .tit-con{
+    display: none;
+    padding: 24px 30px 15px 28px;
+}
+.b-choice .notice .main-content .first{
+    display: block;
+}
+.b-choice .notice .main-content .partner,
+.b-choice .notice .main-content .path{
+    display: inline-block;
+    height: 30px;
+    font: 18px/30px "microsoft yahei";
+}
+.b-choice .notice .main-content .partner{
+    width: 62px;
+    padding-left: 23px;
+    background: url("../150115_PC/icon.png") no-repeat -14px -145px;
+}
+.b-choice .notice .main-content .path{
+    padding-left: 20px;
+}
+.b-choice .notice .main-content .info{
+    padding: 10px 0 20px 0;
+    font: 12px/24px "microsoft yahei";
+    color: #000;
 }

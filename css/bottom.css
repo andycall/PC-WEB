@@ -1,0 +1,27 @@
+.b-bottom{
+    position: relative;
+    top:0px;
+    left: 50%;
+    margin-left: -960px;
+    width: 1920px;
+    z-index: 1;
+}
+.b_bottom {
+    position: absolute;
+    width: 1000px;
+    height: 180px;
+    color: #555;
+    top: 217px;
+    left: 50%;
+    margin-left: -500px;
+}
+.b_bottom .e_content { position:relative; float:left; display:inline; font-family:"microsoft yahei"; }
+.b_bottom .e_content .title { margin:15px 0 0 140px; font-size:26px; }
+.b_bottom .e_content .text { margin-left:140px; font-size:14px; line-height:24px; }
+.b_bottom .e_content a { position:absolute; display:block; top:0; left:0; width:490px; height:160px; }
+.b_bottom .e_content a span { position:absolute; bottom:15px; left:140px; display:block; background:url("http://source.qunar.com/site/images/zhuanti/140804/bottom_btn_bg.jpg"); width:83px; height:32px; font-size:18px; line-height:32px; color:#fefefe; text-align:center; }
+.b_bottom .e_content a:hover span { background:url("http://source.qunar.com/site/images/zhuanti/140804/bottom_btn_hover.jpg"); width:83px; height:32px; }
+
+.b_bottom .e_newtrip { background: url("http://source.qunar.com/site/images/zhuanti/140804/bottom_trip_bg.jpg") no-repeat 15px 15px #f7f7f7; width:490px; height:160px; }
+.b_bottom .e_travelnote { margin-left:20px; background: url("http://source.qunar.com/site/images/zhuanti/140804/bottom_note_bg.jpg") no-repeat 15px 15px #f7f7f7; width:490px; height:160px; }
+
