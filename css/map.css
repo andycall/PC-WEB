@@ -1,0 +1,18 @@
+.b-map{
+    position: relative;
+    top:60px;
+    left: 50%;
+    margin-left: -505px;
+    width: 1011px;
+    padding-bottom: 88px;
+}
+.b-map h2{
+    font-size: 48px;
+    padding: 55px 0 68px 0;
+    text-align: center;
+}
+.b-map .island-map{
+    width: 1011px;
+    height: 439px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/map.png") no-repeat;
+}

@@ -1,9 +1,11 @@
 .b-test{
     position: relative;
-    width: 100%;
-    min-height: 10.66rem;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150114_PC/test_bg.jpg") no-repeat 0 bottom;
-    background-size: 100%;
+    top: 48px;
+    left: 50%;
+    margin-left: -577px;
+    width: 1131px;
+    height: 519px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/test_bg.jpg") no-repeat 0 bottom;
 }
 .b-test h2{
     position: absolute;
