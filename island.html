@@ -270,6 +270,177 @@
         </ul>
     </div>
 </div>
+<script>
+    var exercise = [
+        {
+            title : "1、在纪念品店看到漂亮海星，你会送给谁？",
+            test : [
+                {
+                    'content' : "爱人",
+                    'island' : "马尔代夫,大溪地"
+                },
+                {
+                    'content' : "狂野震撼的摇滚歌曲",
+                    'island' : "塞舌尔,夏威夷,毛里求斯"
+                },
+                {
+                    'content' : "父母",
+                    'island' : "普吉岛,巴厘岛"
+                },
+                {
+                    'content' : "朋友",
+                    'island'  : "毛里求斯,帕劳"
+                }
+            ]
+        },
+        {
+            title : "2、沙滩酒吧正在放音乐，你觉得是什么音乐？",
+            test : [
+                {
+                    'content' : "净化心灵的宗教音乐",
+                    'island' : "巴厘岛"
+                },
+                {
+                    'content' : "狂野震撼的摇滚歌曲",
+                    'island' : "塞舌尔,夏威夷,毛里求斯"
+                },
+                {
+                    'content' : "抒情浪漫的悠扬音乐",
+                    'island' : "马尔代夫,帕劳"
+                },
+                {
+                    'content' : "高雅尊贵的古典乐曲",
+                    'island'  : "大溪地"
+                }
+            ]
+        },
+        {
+            title : "3、你去酒吧喝酒，会点什么？",
+            test : [
+                {
+                    'content' : "啤酒",
+                    'island' : "普吉岛"
+                },
+                {
+                    'content' : "香槟",
+                    'island' : "巴厘岛,塞班岛"
+                },
+                {
+                    'content' : "白葡萄酒",
+                    'island' : "帕劳,马尔代夫,毛里求斯"
+                },
+                {
+                    'content' : "红葡萄酒",
+                    'island'  : "大溪地,夏威夷,塞舌尔"
+                }
+            ]
+        },
+        {
+            title : "4、天上掉下神秘礼物，你认为是什么？",
+            test : [
+                {
+                    'content' : "一枚昂贵的戒指",
+                    'island' : "马尔代夫,大溪地"
+                },
+                {
+                    'content' : "一瓶名贵葡萄酒",
+                    'island' : "帕劳,塞舌尔"
+                },
+                {
+                    'content' : "一款奢侈品包包",
+                    'island' : "夏威夷,毛里求斯,塞班岛"
+                },
+                {
+                    'content' : "一台最新款手机",
+                    'island'  : "普吉岛,巴厘岛"
+                }
+            ]
+        },
+        {
+            title : "5、一位美女一丝不挂在沙滩散步，请问为什么？",
+            test : [
+                {
+                    'content' : "那里是属于天体营俱乐部的小岛",
+                    'island' : ""
+                },
+                {
+                    'content' : "她以为自己是穿着泳衣的",
+                    'island' : ""
+                },
+                {
+                    'content' : "她是个女演员，正在拍摄电影",
+                    'island' : ""
+                },
+                {
+                    'content' : "她以为那里没有其他人",
+                    'island'  : ""
+                }
+            ]
+        }
+    ];
+    var exersize_result = window.info= {
+        "马尔代夫" : {
+            name: "马尔代夫！",
+            share: "骆驼君送我习大大同款马代游，简直醉了！ ",
+            reason : "送你习大大同款马代游，拿好不谢，骆驼君只能帮你到这儿了。",
+            img : "http://img1.qunarzz.com/travel/poi/1501/f4/c2e7fa0a823745.jpg"
+        },
+        "普吉岛" : {
+            name: "普吉岛！",
+            share: "看完比女人还销魂的男人们，别问我节操是神马？！",
+            reason : "看完比女人还销魂的男人们，请问节操是神马，可以吃么？",
+            img : "http://img1.qunarzz.com/travel/poi/1501/25/67bc6aaf7bf8c9.jpg"
+        },
+        "塞班岛" : {
+            name: "塞班岛！",
+            share: "骆驼君一定要玩这么大么？伦家只是想去塞班岛做个安静的美土豪。",
+            reason : "一定要玩这么大么？伦家只是想去塞班岛做个安静的美土豪。",
+            img : "http://img1.qunarzz.com/travel/poi/1501/c8/e433734643002e.jpg"
+        },
+        "毛里求斯" : {
+            name: "毛里求斯！",
+            share: "以琛带默笙私奔到毛里求斯度蜜月啦，朕甚感欣慰！",
+            reason : "亲，旷世奇恋以琛默笙都去毛球蜜月了，你还在等神马？",
+            img : "http://img1.qunarzz.com/travel/poi/1501/a7/2cd1e9720d99ce.jpg"
+        },
+        "塞舌尔" : {
+            name: "塞舌尔！",
+            share: "流弊轰轰，人品爆发，要去塞舌尔想想还有点小激动呢！",
+            reason : "流弊轰轰，人品爆发，要去塞舌尔想想还有点小激动呢！",
+            img : "http://img1.qunarzz.com/travel/poi/1501/a1/6299bd88a7aa38.jpg"
+        },
+        "巴厘岛" : {
+            name: "巴厘岛！",
+            share: "骆驼君说，荷包略扁，心塞！没关系，还有巴厘岛！",
+            reason : "荷包略扁，心塞！没关系，还有巴厘岛，一般人我不告诉他。",
+            img : "http://img1.qunarzz.com/travel/poi/1501/3a/995f65665e8426.jpg"
+        },
+        "帕劳" : {
+            name: "帕劳！",
+            share: "太凶残了，上帝的水族箱竟然被我承包了，赶明儿再玩耍哟！",
+            reason : "太凶残了，上帝的水族箱竟然被你承包了，还能不能愉快地玩耍了！",
+            img : "http://img1.qunarzz.com/travel/poi/1501/2e/4efbba1a25cedd.jpg"
+        },
+        "大溪地" : {
+            name: "大溪地！",
+            share: "带上十包辣条去大溪地，有钱只管任性！",
+            reason : "人类已经无法阻止你去天堂了，记得带上十包辣条，有钱只管任性！",
+            img : "http://img1.qunarzz.com/travel/poi/1501/88/9378d27d7b06f.jpg"
+        },
+        "夏威夷" : {
+            name: "夏威夷！",
+            reason : "为了度个假，你也是蛮拼的。骆驼君姑且赏你个夏威夷，让你买买买！",
+            share: "骆驼君你真是太顽皮了，不带这么玩的好么！想让我星际穿越阔以直说嘛！",
+            img : "http://img1.qunarzz.com/travel/poi/1501/1e/fefd81ade15057.jpg"
+        },
+        "%￥#@！#" : {
+            name: "%￥#@！#！",
+            reason : "艾玛，骆驼君也帮不了你了，适合你的海岛可能在火星上。",
+            share: "骆驼君你真是太顽皮了，不带这么玩的好么！想让我星际穿越阔以直说嘛！",
+            img : "http://img1.qunarzz.com/travel/poi/1501/6c/e46055a43475de.jpg"
+        }
+    }
+</script>
 <script type="text/javascript" src="http://hongyan.cqupt.edu.cn/cdn/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/essential.js"></script>
