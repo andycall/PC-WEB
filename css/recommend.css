@@ -6,3 +6,137 @@
     height: 1030px;
     background: #5bdcdc;
 }
+.b-recommend h2{
+    font-size: 48px;
+    padding: 55px 0 68px 0;
+    text-align: center;
+}
+.b-recommend .recommend-show,
+.b-recommend .dialog{
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1020px;
+    height: 910px;
+}
+.b-recommend .recommend-show .line{
+    height: 230px;
+    padding-bottom: 40px;
+}
+.b-recommend .recommend-show .line .item{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    height: 230px;
+    width: 235px;
+    background: #fff;
+    cursor: pointer;
+}
+.b-recommend .recommend-show .line .item img{
+    width: 235px;
+    height: 160px;
+}
+.b-recommend .recommend-show .line .item .writer{
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    margin-left: -38px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #fff;
+    border-radius: 38px;
+}
+.b-recommend .recommend-show .line .item .name{
+    position: absolute;
+    bottom: 10px;
+    width: 235px;
+    text-align: center;
+    font: 18px/20px "microsoft yahei";
+    color: #000;
+}
+.b-recommend .dialog{
+    height: 800px;
+    top: -910px;
+    background: rgba(91,220,220,0.5);
+}
+.b-recommend .dialog .island-info{
+    position: relative;
+    top: 124px;
+    left: 50%;
+    margin-left: -430px;
+    width: 860px;
+    height: 500px;
+    background: #fff;
+    color: #000;
+}
+.b-recommend .dialog .island-info .close{
+    position: absolute;
+    right: -25px;
+    top:-25px;
+    width: 50px;
+    height: 50px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -7px -949px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
+}
+.b-recommend .dialog .island-info h2{
+    font: 36px/40px "microsoft yahei";
+    padding: 30px 0 25px 0;
+}
+.b-recommend .dialog .island-info .introduce {
+    position: relative;
+    height: 150px;
+    padding: 0 43px 0 0;
+}
+.b-recommend .dialog .island-info .introduce .writer{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 150px;
+    font-size: 18px;
+}
+.b-recommend .dialog .island-info .introduce .writer img{
+    position: absolute;
+    top:5px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-left: 40px;
+}
+.b-recommend .dialog .island-info .introduce .writer .name{
+    position: absolute;
+    top: 92px;
+    left: 36px;
+    font-size: 18px;
+}
+.b-recommend .dialog .island-info .introduce .writer .flag{
+    position: absolute;
+    top:125px;
+    left: 45px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #fff;
+    background: #ff9c00;
+}
+.b-recommend .dialog .island-info .introduce .essay{
+    padding-left: 165px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+}
+.b-recommend .dialog .island-info .introduce .essay .link{
+    color: #ff8a00;
+}
+.b-recommend .dialog .island-info .show{
+    width: 860px;
+    height: 180px;
+    padding: 20px 0 0 46px;
+}
+.b-recommend .dialog .island-info .show .pic{
+    float: left;
+    margin-right: 11px;
+}
+.b-recommend .dialog .island-info .show .pic img{
+    width: 246px;
+    height: 180px;
+}
