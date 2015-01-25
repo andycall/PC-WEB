@@ -25,6 +25,7 @@
     height: 44px;
     left: 200px;
     top: 200px;
+    cursor: pointer;
 }
 
 .island-item a{
@@ -60,10 +61,10 @@
 .dialog .content{
     position: relative;
     width: 100%;
-
 }
 .dialog .content img{
     width: 170px;
+    height: 128px;
     margin: 15px auto 15px auto;
     display: block;
 }

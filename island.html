@@ -175,8 +175,8 @@
                     <dd class="option"><span class="circle"></span>朋友</dd>
                 </dl>
             </div>
-            <button class="next" id="next" style="display: none;">下一题</button>
-            <button class="next last" >分享测试 查看我的专属海岛</button>
+            <button class="next" id="next">下一题</button>
+            <button class="next last" id="share" style="display: none;">分享测试 查看我的专属海岛</button>
         </div>
     </div>
     <div class="b-recommend" id="recommend"></div>
@@ -202,7 +202,7 @@
                     <span class="place-icon">qwdwqdwqd</span>
                 </div>
                 <div class="content">
-                    <img src="150115_PC/island_image.png" alt=""/>
+                    <img class="content_image"  src="150115_PC/island_image.png" alt=""/>
                     <p class="essay">撒旦刻录机撒来得及了凯撒进得去激动i都i就阿斯达撒旦撒旦撒旦撒d</p>
                     <a href="#" class="forMore">查看详情</a>
                 </div>
@@ -274,6 +274,25 @@
         </ul>
     </div>
 </div>
+
+<!-- 题目模板 -->
+<script type="text/template" id="test_template">
+    <dl class="subject" data-index="<%= index %>">
+        <dt class="title"><%= title %></dt>
+        <% test.forEach(function(value, index){ %>
+        <dd class="option" data-island="<%= value['island'] %>"><span class="circle"></span><%= value['content'] %></dd>
+        <% }); %>
+    </dl>
+</script>
+
+<!-- 测试结果模板 -->
+<script type="text/template" id="island_pic">
+    <img src="<%= img %>" alt=""/>
+    <p class="name"><%= name %></p>
+    <div class="reason">推荐理由：<%= reason %></div>
+    <button class="retest">重测一次</button>
+</script>
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script>
     var exercise = [
@@ -446,6 +465,8 @@
         }
     }
 </script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/essential.js"></script>
 <script type="text/javascript" src="js/map.js"></script>

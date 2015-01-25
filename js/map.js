@@ -3,7 +3,7 @@ $(document).ready(function(){
 		{
 			left: 750,
 			top: 100,
-			image : "",
+			image : "150115_PC/island_image.png",
 			title : "北美洲",
 			content : "laskdlk12e1j12d2",
 			moreHref : "http://baidu.com"
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		{
 			left: 850,
 			top: 280,
-			image : "",
+			image : "150115_PC/island_imagqwdqwde.png",
 			title : "南美洲",
 			content : "laskdlk12e1j12qqwdqwdqwdwqdd2",
 			moreHref : "http://taobao.com"
@@ -24,10 +24,11 @@ $(document).ready(function(){
 			$('.essay').html(value['content']);
 			$('.forMore').attr('href', value['moreHref']);
 			$('.place-icon').html(value['title']);
+			$('.content_image').attr('src', value['image']);
 		}
 
 		var elementStr =
-			'<li style="top: ' + value['top'] +'px; left: ' + value['left' ]+'px;" class="island-item" data-moreHref="' + value['moreHref'] + '"  data-content="' + value['content'] +'"> ' +
+			'<li style="top: ' + value['top'] +'px; left: ' + value['left' ]+'px;" class="island-item" data-image="' + value['image'] +'" data-moreHref="' + value['moreHref'] + '"  data-content="' + value['content'] +'"> ' +
 				'<a href="javascript:void(0)">' + value['title']  +'</a> ' +
 			'</li>';
 
@@ -43,9 +44,11 @@ $(document).ready(function(){
 		var title = $(target).find('a').html();
 		var content = $(target).attr('data-content');
 		var moreHref = $(target).attr('data-moreHref');
+		var image = $(target).attr('data-image');
 		$('.essay').html(content);
 		$('.forMore').attr('href', moreHref);
 		$('.place-icon').html(title);
+		$('.content_image').attr('src', image);
 	});
 
 });

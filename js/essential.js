@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : 0
 		});
-		if(navigator.userAgent.indexOf('6.0')){
+		if(navigator.userAgent.indexOf('6.0') > 0){
 			window.scroll(0, 0);
 		}
 	});
@@ -73,7 +73,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : positionArr[index]
 		});
-		if(navigator.userAgent.indexOf('6.0')){
+		if(navigator.userAgent.indexOf('6.0') > 0){
 			window.scroll(0, positionArr[index]);
 		}
 		scrollIndex = index;
@@ -90,14 +90,14 @@ $(document).ready(function(){
 			isReady = scrollTop >= 650, // 是否可以切换fixed
 			nextPosition, prevPosition;
 
-
 		if(isReady != ready_tmp){
 			ready_status = true;
 			ready_tmp = isReady;
 		}
 
 		if(isReady && ready_status){
-			if(navigator.userAgent.indexOf("6.0")){
+
+			if(navigator.userAgent.indexOf("6.0") > 0){
 				right_slider.addClass('ie6fixedTL');
 			}
 			else{
@@ -109,7 +109,7 @@ $(document).ready(function(){
 			ready_status = false;
 		}
 		else if(!isReady && ready_status){
-			if(navigator.userAgent.indexOf('6.0')){
+			if(navigator.userAgent.indexOf('6.0') > 0){
 				right_slider.removeClass('ie6fixedTL');
 			}
 			else {

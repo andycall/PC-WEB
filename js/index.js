@@ -85,20 +85,21 @@ $(document).ready(function(){
             test : exercise_JSON['test']
         });
         $question.html(exercise_HTML);
-        $('.option').on('touchstart click', option_click);
+        $('.option').on(' click', option_click);
     }
-    /***** 模板快 end ****/
 
-    $choice.on('touchstart click', function(e){
-        e.preventDefault();
-        $(this).parents('.describtion').hide();
-        $testcontent.show();
-        render_question();
-    });
+    /***** 模板快 end ****/
+    //
+    //$choice.on(' click', function(e){
+    //    e.preventDefault();
+    //    $(this).parents('.describtion').hide();
+    //    $testcontent.show();
+    //
+    //});
 
     /***  事件处理 ****/
 
-    $('body').delegate(".retest","touchstart click",function(e){
+    $('body').delegate(".retest"," click",function(e){
         e.preventDefault();
         index = 0;
         $headerinfo.html("<p>有人说，爱她就带她去海岛，恨她就让她来选岛！</p>" +
@@ -110,35 +111,32 @@ $(document).ready(function(){
         $share.hide();
     });
 
-    $next.on('touchstart click', function(e){
+    $next.on(' click', function(e){
         e.preventDefault();
-        if($(".island-active").length == 0){
-
+        if($(".active").length == 0){
             return;
         }
         index++;
-        if(index == 4){
-            $share.show();
-            $next.hide();
-        }
+
         if(index < exercise.length){
             setTimeout(function(){
                 render_question();
             }, 100);
         }else{
             $share.show();
+            $next.hide();
         }
     });
-    $share.on('touchstart click', function(e){
+    $share.on(' click', function(e){
         e.preventDefault();
-        if($(".island-active").length == 0){
+        if($(".active").length == 0){
             return;
         }
-        $dialogmask .show();
+        $dialogmask.show();
         window.best = Input_result.getBest();
     });
 
-    $shareDialog.on('touchstart click',function(e){
+    $shareDialog.on(' click',function(e){
         e.preventDefault();
         $dialogmask .hide();
 
@@ -156,6 +154,7 @@ $(document).ready(function(){
 
     function option_click(e){
         e.preventDefault();
+
         var target = $(e.currentTarget).find('.circle');
         var allcircle = target.parents('.subject').find('.circle');
         var result = target.parents('.option').data('island').split(',');
@@ -167,9 +166,9 @@ $(document).ready(function(){
         for(var i = 0,len = result.length; i < len; i ++){
             Input_result.add(result[i]);
         }
-        target.addClass('island-active');
+        target.addClass('active');
     }
 
     /***  事件处理 END ****/
-
+    render_question();
 });
