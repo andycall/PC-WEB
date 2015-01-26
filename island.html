@@ -427,7 +427,7 @@
             <ul>
                 <%  if(i * 4 + 4 < len){ %>
                    <% for(var j = 0; j < 4; j ++){ %>
-                        <li class="item" data-flag="<%= islands[i*4 + j]['flag']  %>" data-place="<%= islands[i*4 + j]['place'] %>" data-writer="<%= islands[i*4 + j]['writer'] %>" data-content="<%= islands[i*4 + j]['content'] %>" data-show_pic="<%= islands[i*4 + j]['show_pic'].join(',') %>">
+                        <li class="item push_item" data-flag="<%= islands[i*4 + j]['flag']  %>" data-place="<%= islands[i*4 + j]['place'] %>" data-writer="<%= islands[i*4 + j]['writer'] %>" data-content="<%= islands[i*4 + j]['content'] %>" data-show_pic="<%= islands[i*4 + j]['show_pic'].join(',') %>">
                             <img src="<%= islands[i*4 + j]['logo_img'] %>" alt=""/>
                             <img class="writer" src="<%= islands[i*4 + j]['code_img'] %>" alt=""/>
                             <span class="name"><%= islands[i*4 +j ]['name'] %></span>
@@ -435,7 +435,7 @@
                    <% } %>
                 <% }else{ %>
                     <% for(var x = i * 4; x < len; x ++){ %>
-                            <li class="item" data-flag="<%= islands[x]['flag'] %>"  data-place="<%= islands[x]['place'] %>" data-writer="<%= islands[ x]['writer'] %>" data-content="<%= islands[ x]['content'] %>" data-show_pic="<%= islands[ x]['show_pic'].join(',') %>">
+                            <li class="item push_item" data-flag="<%= islands[x]['flag'] %>"  data-place="<%= islands[x]['place'] %>" data-writer="<%= islands[ x]['writer'] %>" data-content="<%= islands[ x]['content'] %>" data-show_pic="<%= islands[ x]['show_pic'].join(',') %>">
                                 <img src="<%= islands[ x]['logo_img'] %>" alt=""/>
                                 <img class="writer" src="<%= islands[ x]['code_img'] %>" alt=""/>
                                 <span class="name"><%= islands[x]['name'] %></span>

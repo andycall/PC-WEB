@@ -10,9 +10,8 @@ $(document).ready(function(){
 
 	$('.item').on('click', function(e){
 		var target = e.target;
-		while(target.className != 'item') target = target.parentNode;
+		while(target.className.indexOf('push_item') < 0) target = target.parentNode;
 
-		console.log(target);
 		var place = $(target).attr('data-place');
 		var writer = $(target).attr('data-writer');
 		var content = $(target).attr('data-content');
