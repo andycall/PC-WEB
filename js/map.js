@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	var elementCache = document.createDocumentFragment();
+
 	$.each(place, function(index, value){
 		if(index == 0){
 			$('.essay').html(value['content']);
@@ -18,10 +19,23 @@ $(document).ready(function(){
 	});
 	$('.island-list').html(elementCache);
 
+	var island_item = $('.island-item');
+	var image_url = island_item.css('background-image');
 
-	$(".island-item").on('click', function(e){
+	island_item.on('click', function(e){
 		var target = e.target;
 		if(target.nodeName != 'LI') target = target.parentNode;
+
+
+		island_item.each(function(index){
+			$(this).css({
+				'background-image' : image_url
+			});
+		});
+
+		$(target).css({
+			'background-image' : image_url.replace('place.png', 'place2.png')
+		});
 
 		var title = $(target).find('a').html();
 		var content = $(target).attr('data-content');
