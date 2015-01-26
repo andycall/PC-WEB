@@ -70,12 +70,13 @@
     color: #000;
 }
 .b-recommend .dialog .island-info .close{
+    cursor: pointer;
     position: absolute;
     right: -25px;
     top:-25px;
     width: 50px;
     height: 50px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -7px -949px;
+    background: url("../150115_PC/tab_bg.png") no-repeat -7px -949px;
     _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
 }
 .b-recommend .dialog .island-info h2{

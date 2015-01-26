@@ -1,23 +1,5 @@
 $(document).ready(function(){
-	var place = [
-		{
-			left: 750,
-			top: 100,
-			image : "150115_PC/island_image.png",
-			title : "北美洲",
-			content : "laskdlk12e1j12d2",
-			moreHref : "http://baidu.com"
-		},
-		{
-			left: 850,
-			top: 280,
-			image : "150115_PC/island_imagqwdqwde.png",
-			title : "南美洲",
-			content : "laskdlk12e1j12qqwdqwdqwdwqdd2",
-			moreHref : "http://taobao.com"
-		}
 
-	];
 	var elementCache = document.createDocumentFragment();
 	$.each(place, function(index, value){
 		if(index == 0){

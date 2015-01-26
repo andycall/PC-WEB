@@ -31,8 +31,6 @@ $(document).ready(function(){
 
 	window.windowScroll = windowScroll;
 
-	alert(navigator.userAgent.indexOf("6.0") > 0);
-
 	var d               = document,
 		right_slider   = $(".e-rightslide"),
 		slide_item    = $(".slide-item"),
