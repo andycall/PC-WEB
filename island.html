@@ -206,7 +206,7 @@
     <div class="b-recommend">
         <h2>聪明旅行家海岛推荐</h2>
         <div class="recommend-show">
-            <ul>
+            <ul id="recommend-content">
                 <li class="line">
                     <ul>
                         <li class="item">
@@ -281,7 +281,7 @@
                 </li>
             </ul>
         </div>
-        <div class="dialog">
+        <div class="dialog" style="display: none;">
             <div class="island-info">
                 <span class="close"></span>
                 <h2>沙巴</h2>
@@ -422,14 +422,27 @@
 
 <!-- 海岛推荐模板 -->
 <script type="text/template" id="push_island">
-    <% for(var i = 0,len = islands.length; i < len; i ++){ %>
+    <% for(var i = 0,len = islands.length; i < Math.ceil(len / 4); i ++){ %>
         <li class="line">
             <ul>
-                <li class="item">
-                    <img src="" alt=""/>
-                    <img class="writer" src="150115_PC/two-dimension-code_02.png" alt=""/>
-                    <span class="name">毛里求斯</span>
-                </li>
+                <%  if(i * 4 + 4 < len){ %>
+                   <% for(var j = 0; j < 4; j ++){ %>
+                        <li class="item" data-flag="<%= islands[i*4 + j]['flag']  %>" data-place="<%= islands[i*4 + j]['place'] %>" data-writer="<%= islands[i*4 + j]['writer'] %>" data-content="<%= islands[i*4 + j]['content'] %>" data-show_pic="<%= islands[i*4 + j]['show_pic'].join(',') %>">
+                            <img src="<%= islands[i*4 + j]['logo_img'] %>" alt=""/>
+                            <img class="writer" src="<%= islands[i*4 + j]['code_img'] %>" alt=""/>
+                            <span class="name"><%= islands[i*4 +j ]['name'] %></span>
+                        </li>
+                   <% } %>
+                <% }else{ %>
+                    <% for(var x = i * 4; x < len; x ++){ %>
+                            <li class="item" data-flag="<%= islands[x]['flag'] %>"  data-place="<%= islands[x]['place'] %>" data-writer="<%= islands[ x]['writer'] %>" data-content="<%= islands[ x]['content'] %>" data-show_pic="<%= islands[ x]['show_pic'].join(',') %>">
+                                <img src="<%= islands[ x]['logo_img'] %>" alt=""/>
+                                <img class="writer" src="<%= islands[ x]['code_img'] %>" alt=""/>
+                                <span class="name"><%= islands[x]['name'] %></span>
+                            </li>
+                    <% } %>
+                <% } %>
+
             </ul>
         </li>
     <% } %>
@@ -438,21 +451,53 @@
 <script>
     var recommend = [
         {
-            logo_img : "",
-            code_img : "",
+            logo_img : "http://source.qunar.com/site/images/zhuanti/130916/qy_003.jpg",
+            code_img : "150115_PC/two-dimension-code_02.png",
             name : "毛利去死",
             place : "沙巴",
             writer : "andycall",
-            content : "我去后端怎么这么坑",
+            content : "我去后端怎qwdwqdwqqwd么这么坑",
+            flag : "逗比旅行家",
             show_pic : ["","",""]
         },
         {
-            logo_img : "",
-            code_img : "",
+            logo_img : "http://source.qunar.com/site/images/zhuanti/130916/qy_003.jpg",
+            code_img : "150115_PC/two-dimension-code_02.png",
             name : "毛利去死",
             place : "沙巴",
             writer : "andycall",
             content : "我去后端怎么这么坑",
+            flag : "逗比旅行家",
+            show_pic : ["","",""]
+        },
+        {
+            logo_img : "http://source.qunar.com/site/images/zhuanti/130916/qy_003.jpg",
+            code_img : "150115_PC/two-dimension-code_02.png",
+            name : "毛利去死",
+            place : "沙巴",
+            writer : "andycall",
+            content : "我去后端怎么这么坑",
+            flag : "逗比旅行家",
+            show_pic : ["","",""]
+        },
+        {
+            logo_img : "http://source.qunar.com/site/images/zhuanti/130916/qy_003.jpg",
+            code_img : "150115_PC/two-dimension-code_02.png",
+            name : "毛利去死",
+            place : "沙巴",
+            writer : "andycall",
+            content : "我去后端怎么这么坑",
+            flag : "逗比旅行家",
+            show_pic : ["","",""]
+        },
+        {
+            logo_img : "http://source.qunar.com/site/images/zhuanti/130916/qy_003.jpg",
+            code_img : "150115_PC/two-dimension-code_02.png",
+            name : "毛利去死",
+            place : "沙巴",
+            writer : "andycall",
+            content : "我去后端怎么这么坑",
+            flag : "逗比旅行家",
             show_pic : ["","",""]
         }
     ];
