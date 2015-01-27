@@ -19,13 +19,17 @@ $(document).ready(function(){
 	});
 	$('.island-list').html(elementCache);
 
+
 	var island_item = $('.island-item');
 	var image_url = island_item.css('background-image');
+
+	island_item.eq(0).css({
+		'background-image' : image_url.replace('place.png', 'place2.png')
+	});
 
 	island_item.on('click', function(e){
 		var target = e.target;
 		if(target.nodeName != 'LI') target = target.parentNode;
-
 
 		island_item.each(function(index){
 			$(this).css({
