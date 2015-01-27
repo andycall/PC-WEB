@@ -48,7 +48,7 @@ $(document).ready(function(){
                         title : "#去哪儿攻略#" + document.title,
                         url: params.url || location.href,
                         site : params.site || location.hostname,
-                        content: params.title || "#去哪儿攻略#" + document.title,
+                        content: params.title || "#去哪儿攻略#" + document.title
                     };
                 }
             }
@@ -233,16 +233,16 @@ $(document).ready(function(){
             + exersize_result[best]['share']
             +'  小伙伴们表羡慕嫉妒恨啦！一起来测测吧！~ @去哪儿攻略 @去哪儿网'
         });
-        //$dialogmask.hide();
-        //$testbg.hide();
-        //var island_pic = window.template($('#island_pic').html())({
-        //    name: best,
-        //    reason : exersize_result[best]['reason'],
-        //    share : exersize_result[best]['share'],
-        //    img : exersize_result[best]['img']
-        //});
-        //$('.test-result').html(island_pic);
-        //$resultcontent.show();
+        $dialogmask.hide();
+        $testbg.hide();
+        var island_pic = window.template($('#island_pic').html())({
+            name: best,
+            reason : exersize_result[best]['reason'],
+            share : exersize_result[best]['share'],
+            img : exersize_result[best]['img']
+        });
+        $('.test-result').html(island_pic);
+        $resultcontent.show();
         return false;
     });
 
