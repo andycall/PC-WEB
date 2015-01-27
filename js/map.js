@@ -12,7 +12,10 @@ $(document).ready(function(){
 
 		var elementStr =
 			'<li style="top: ' + value['top'] +'px; left: ' + value['left' ]+'px;" class="island-item" data-image="' + value['image'] +'" data-moreHref="' + value['moreHref'] + '"  data-content="' + value['content'] +'"> ' +
-				'<a href="javascript:void(0)">' + value['title']  +'</a> ' +
+				'<div style="position: relative; width: 100%; height: 100%;">' +
+					'<a style="position: absolute; left: ' + value['font_left'] +'px; top : ' + value['font_top'] + 'px" href="javascript:void(0)">' + value['title']  +'</a> ' +
+					'<span></span>' +
+				'</div>' +
 			'</li>';
 
 		elementCache.appendChild($(elementStr)[0]);
