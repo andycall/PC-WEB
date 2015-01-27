@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	$.each(place, function(index, value){
 		if(index == 0){
-			$('.essay').html(value['content']);
+			$('.map_essay').html(value['content']);
 			$('.forMore').attr('href', value['moreHref']);
 			$('.place-icon').html(value['title']);
 			$('.content_image').attr('src', value['image']);
@@ -41,7 +41,7 @@ $(document).ready(function(){
 		var content = $(target).attr('data-content');
 		var moreHref = $(target).attr('data-moreHref');
 		var image = $(target).attr('data-image');
-		$('.essay').html(content);
+		$('.map_essay').html(content);
 		$('.forMore').attr('href', moreHref);
 		$('.place-icon').html(title);
 		$('.content_image').attr('src', image);

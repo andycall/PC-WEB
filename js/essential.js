@@ -40,12 +40,11 @@ $(document).ready(function(){
 		ready_status    = false, // 是否需要运行切换
 		menu_list = $(".menu_list");
 
-
 	$(".two-dimension-code").on('click', function(){
 		$("body").animate({
 			scrollTop : 0
 		});
-		if(navigator.userAgent.indexOf('6.0') > 0){
+		if(parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 8){
 			window.scroll(0, 0);
 		}
 	});
@@ -72,7 +71,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : positionArr[index]
 		});
-		if(navigator.userAgent.indexOf('6.0') > 0){
+		if(parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 8){
 			window.scroll(0, positionArr[index]);
 		}
 		scrollIndex = index;
@@ -108,7 +107,7 @@ $(document).ready(function(){
 			ready_status = false;
 		}
 		else if(!isReady && ready_status){
-			if(navigator.userAgent.indexOf('6.0') > 0){
+			if(parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 8){
 				right_slider.removeClass('ie6fixedTL');
 			}
 			else {

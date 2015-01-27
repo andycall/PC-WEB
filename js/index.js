@@ -85,7 +85,14 @@ $(document).ready(function(){
             test : exercise_JSON['test']
         });
         $question.html(exercise_HTML);
-        $('.option').on(' click', option_click);
+
+        if(index == exercise.length - 1){
+            $('.option').on('click', last_click);
+        }
+        else{
+            $('.option').on(' click', option_click);
+        }
+
     }
 
     /***** 模板快 end ****/
@@ -165,6 +172,26 @@ $(document).ready(function(){
             Input_result.add(result[i]);
         }
         target.addClass('active');
+        return false;
+    }
+
+    function last_click(e){
+        var target = $(e.currentTarget).find('.circle');
+        var allcircle = target.parents('.subject').find('.circle');
+        var result = target.parents('.option').data('island').split(',');
+
+        allcircle.each(function(){
+            this.className = "circle";
+        });
+
+        for(var i = 0,len = result.length; i < len; i ++){
+            Input_result.add(result[i]);
+        }
+        target.addClass('active');
+
+        $share.show();
+        $next.hide();
+
         return false;
     }
 

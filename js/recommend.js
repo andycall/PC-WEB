@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$(this).parents('.dialog').hide();
 	});
 
-	$('.item').on('click', function(e){
+	$('.push_item').on('click', function(e){
 		var target = e.target;
 		while(target.className.indexOf('push_item') < 0) target = target.parentNode;
 
