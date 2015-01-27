@@ -5,8 +5,89 @@
 /*******  使用jquery ready创建一个闭包  ********/
 $(document).ready(function(){
 
+    var pop_share = (function(){
+        var AppKey = "100244931";
+        var ObjPro = Object.prototype;
+        var encode = encodeURIComponent;
+
+        var Share = {
+            "weibo" : {
+                "url" : "http://service.weibo.com/share/share.php",
+                "parse" : function(params){
+                    var undef = null;
+                    return {
+                        url: params.url || location.href,
+                        type:'3',
+                        count: params.count || undef, /**是否显示分享数，1显示(可选)*/
+                        appkey:params.appkey || AppKey, /**您申请的应用appkey,显示分享来源(可选)*/
+                        title: params.title || "#去哪儿攻略#" + document.title, /**分享的文字内容(可选，默认为所在页面的title)*/
+                        pic: params.pic || undef, /**分享图片的路径(可选)*/
+                        ralateUid:params.uid || undef, /**关联用户的UID，分享微博会@该用户(可选)*/
+                        language:params.language || undef , /**设置语言，zh_cn|zh_tw(可选)*/
+                        dpc:1
+                    };
+
+                }
+            },
+            "QQroom" : {
+                "url" : "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",
+                "parse" : function(params){
+                    return {
+                        desc:  params.title || "#去哪儿攻略#" + document.title,
+                        title : "#去哪儿攻略#" + document.title,
+                        summary : "#去哪儿攻略#" + document.title,
+                        url: params.url || location.href,
+                        site : params.site || location.hostname
+                    };
+                }
+            },
+            "tencent" : {
+                "url" : "http://v.t.qq.com/share/share.php",
+                "parse" : function(params){
+                    return {
+                        title : "#去哪儿攻略#" + document.title,
+                        url: params.url || location.href,
+                        site : params.site || location.hostname,
+                        content: params.title || "#去哪儿攻略#" + document.title,
+                    };
+                }
+            }
+        };
+
+        var paramsToStr = function(params){
+            var params_array = [];
+
+            for (var i in params){
+                var q_name = i;
+                var q_val = params[q_name];
+
+                if (ObjPro.toString.call(q_val) === "[object Array]") {
+                    q_val = q_val.join(",");
+                }
+                if (q_val != null) {
+                    q_val = encode(q_val);
+                    params_array.push(q_name+"="+q_val);
+                }
+            }
+            return params_array.join("&");
+        };
+
+        function sendShare(type,options){
+            var config = Share[type];
+            options = options || {};
+
+            var url = config.url;
+            var params = config.parse(options);
+            var params_str = paramsToStr(params);
+            url += "?" + params_str;
+            window.open(url);
+        }
+
+        return sendShare;
+    })();
+
+
     /*******  将所有的对象提前声明， 包括document对象缓存  ********/
-    var document = document;
 
     var $next = $("#next");
     var $share = $("#share");
@@ -140,21 +221,28 @@ $(document).ready(function(){
         }
         $dialogmask.show();
         //$testbg.hide();
-        window.best = Input_result.getBest();
         return false;
     });
 
     $shareDialog.on(' click',function(e){
-        $dialogmask.hide();
-        $testbg.hide();
-        var island_pic = window.template($('#island_pic').html())({
-            name: best,
-            reason : exersize_result[best]['reason'],
-            share : exersize_result[best]['share'],
-            img : exersize_result[best]['img']
+        var best = Input_result.getBest();
+        var type = $(e.target).attr('data-type');
+        pop_share(type,  {
+            title:'最适合我的海岛竟然是 '
+            + exersize_result[best]['name']
+            + exersize_result[best]['share']
+            +'  小伙伴们表羡慕嫉妒恨啦！一起来测测吧！~ @去哪儿攻略 @去哪儿网'
         });
-        $('.test-result').html(island_pic);
-        $resultcontent.show();
+        //$dialogmask.hide();
+        //$testbg.hide();
+        //var island_pic = window.template($('#island_pic').html())({
+        //    name: best,
+        //    reason : exersize_result[best]['reason'],
+        //    share : exersize_result[best]['share'],
+        //    img : exersize_result[best]['img']
+        //});
+        //$('.test-result').html(island_pic);
+        //$resultcontent.show();
         return false;
     });
 
