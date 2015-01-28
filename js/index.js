@@ -140,7 +140,7 @@ $(document).ready(function(){
             }
 
             if(is_equal){
-                var nameArr = Object.keys(this.result);
+                var nameArr = _.keys(this.result);
                 /*index = parseInt((nameArr.length - 1) * Math.random());*/
                 index = 0;
                 return nameArr[index];
