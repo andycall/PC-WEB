@@ -36,6 +36,15 @@ $(document).ready(function(){
     placeicon.eq(0).css({'background-image' : image_url.replace('place', 'place2')});
 
     island_item.on('mouseenter', function(e){
+        showmap(e,0);
+    });
+
+    island_item.on('click',function(e){
+        island_item.unbind("mouseenter");
+        showmap(e,1);
+    });
+
+    function showmap(e,flag){
         var target = e.target;
         if(target.className != 'map_placeicon'){
             while(target.className != 'island-item') target = target.parentNode;
@@ -50,9 +59,11 @@ $(document).ready(function(){
 
         var background_swap = image_url.replace('place', 'place2');
 
-        $(target).css({
-            'background-image' : background_swap
-        });
+        if(flag){
+            $(target).css({
+                'background-image' : background_swap
+            });
+        }
 
         var title = $(target).parents(".island-item").find('a').html();
         var content = $(target).parents(".island-item").attr('data-content');
@@ -64,6 +75,6 @@ $(document).ready(function(){
         $('.forMore').attr('href', moreHref);
         $('.place-icon').html(title);
         $('.content_image').attr('src', image);
-    });
+    }
 
 });
