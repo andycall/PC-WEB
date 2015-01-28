@@ -47,10 +47,11 @@ $(document).ready(function(){
             'background-image' : image_url.replace('place.png', 'place2.png')
         });
 
-        var title = $(target).find('a').html();
-        var content = $(target).attr('data-content');
-        var moreHref = $(target).attr('data-moreHref');
-        var image = $(target).attr('data-image');
+        var title = $(target).parents(".island-item").find('a').html();
+        var content = $(target).parents(".island-item").attr('data-content');
+        var moreHref = $(target).parents(".island-item").attr('data-moreHref');
+        var image = $(target).parents(".island-item").attr('data-image');
+
         $('.map_essay').html(content);
         $('.pic-link').attr('href', moreHref);
         $('.forMore').attr('href', moreHref);
