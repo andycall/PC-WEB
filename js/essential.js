@@ -97,22 +97,28 @@ $(document).ready(function(){
 
 		if(isReady && ready_status){
 
-			right_slider.css({
-				"position" : "fixed",
-				"top" : 50
-			});
-			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
+
+			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7)){
 				right_slider.addClass('ie6fixedTL');
+			}
+			else{
+				right_slider.css({
+					"position" : "fixed",
+					"top" : 50
+				});
 			}
 			ready_status = false;
 		}
 		else if(!isReady && ready_status){
-			right_slider.css({
-				"position": "absolute",
-				"top": "1276px"
-			});
-			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
+
+			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7)){
 				right_slider.removeClass('ie6fixedTL');
+			}
+			else{
+				right_slider.css({
+					"position": "absolute",
+					"top": "1276px"
+				});
 			}
 			ready_status = false;
 		}
