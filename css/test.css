@@ -68,13 +68,15 @@
     _background: url("../150115_PC/icon_ie.png") no-repeat -14px -10px;
 }
 .test_content .next{
-    position: relative;
-    left: 50%;
-    top:20px;
+    display: block;
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*top:20px;*/
     padding: 0 55px;
     height: 50px;
-    margin-left: -110px;
+    /*margin-left: -110px;*/
     border: none;
+    margin: 0 auto;
     border-radius: 4px;
     background: #ff7f4d;
     font: 30px/40px "microsoft yahei";
