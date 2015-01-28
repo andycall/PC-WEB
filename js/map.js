@@ -24,9 +24,18 @@ $(document).ready(function(){
 	var placeicon = $('.map_placeicon');
 
     var island_item = $('.island-item');
+    var isExplorer = /msie [\w.]+/;
+    var docMode = document.documentMode;
     var image_url = island_item.find('.map_placeicon').css('background-image');
+    var isOldIE = isExplorer.exec (navigator.userAgent.toLowerCase ()) && (! docMode || docMode <= 7);
 
-	placeicon.eq(0).css({'background-image' : image_url.replace('place.png', 'place2.png')});
+
+
+    if(isOldIE){
+        image_url.replace('place.png', 'place_ie.png');
+    }
+
+    placeicon.eq(0).css({'background-image' : image_url.replace('place', 'place2')});
 
     island_item.on('click', function(e){
         var target = e.target;
@@ -35,16 +44,16 @@ $(document).ready(function(){
 			target = $(target).find('.map_placeicon')[0];
 		}
 
-		console.log(target);
-
 		placeicon.each(function(index){
             $(this).css({
                 'background-image' : image_url
             });
         });
 
+        var background_swap = image_url.replace('place', 'place2');
+
         $(target).css({
-            'background-image' : image_url.replace('place.png', 'place2.png')
+            'background-image' : background_swap
         });
 
         var title = $(target).parents(".island-item").find('a').html();
@@ -58,5 +67,7 @@ $(document).ready(function(){
         $('.place-icon').html(title);
         $('.content_image').attr('src', image);
     });
+
+
 
 });
