@@ -68,6 +68,7 @@ $(document).ready(function(){
 	slide_item.on('click', function(e){
 		var target = $(e.target);
 		var index = target.attr('data-index');
+
 		$("body").animate({
 			scrollTop : positionArr[index]
 		});
@@ -75,7 +76,7 @@ $(document).ready(function(){
 			window.scroll(0, positionArr[index]);
 		}
 
-		scrollIndex = index;
+		scrollIndex = parseInt(index);
 		$('.slide-item').each(function(){
 			this.className = "slide-item";
 		});
@@ -118,6 +119,7 @@ $(document).ready(function(){
 
 
 		if(isReady && direction === 1){
+
 			if(scrollIndex + 1 >= positionArr.length) return;
 			nextPosition = positionArr[scrollIndex+1];
 			if(scrollTop + 30 > nextPosition){
