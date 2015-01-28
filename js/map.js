@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     placeicon.eq(0).css({'background-image' : image_url.replace('place', 'place2')});
 
-    island_item.on('click', function(e){
+    island_item.on('mouseenter', function(e){
         var target = e.target;
         if(target.className != 'map_placeicon'){
             while(target.className != 'island-item') target = target.parentNode;
