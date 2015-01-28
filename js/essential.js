@@ -44,7 +44,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : 0
 		});
-		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 10) || (navigator.userAgent.indexOf('Firefox') > 0)){
+		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 10) || (navigator.userAgent.indexOf('Firefox') > 0) || (navigator.userAgent.indexOf("Trident") > 0)){
 			window.scroll(0, 0);
 		}
 	});
@@ -72,7 +72,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : positionArr[index]
 		});
-		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) > 5) || (navigator.userAgent.indexOf('Firefox') > 0)){
+		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) > 5) || (navigator.userAgent.indexOf('Firefox') > 0) || (navigator.userAgent.indexOf("Trident") > 0)){
 			window.scroll(0, positionArr[index]);
 		}
 
