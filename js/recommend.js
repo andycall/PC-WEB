@@ -36,6 +36,29 @@ $(document).ready(function(){
 			img_container.append('<li class="pic"><a href="'+ link +'" target="_blank"><img src="' + show_pic[i] +'" alt=""/></a></li>')
 		}
 
+		var windowWidth = $(window).width();
+		var windowHeight = $(window).height();
+		var recommend_top = $('.b-recommend').offset().top;
+
+		dialog.css({
+			width : windowWidth,
+			height : windowHeight,
+			top : $(window).scrollTop() - recommend_top ,
+			left : 0
+		});
+
+
+
+		var island_info = dialog.find('.island-info');
+
+		var left = windowWidth / 2 - island_info.width() / 2;
+		var top = windowHeight / 2 - island_info.height() / 2;
+
+		island_info.css({
+			left : left,
+			top : top
+		});
+
 		dialog.show();
 
 	});
