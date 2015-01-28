@@ -44,7 +44,7 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : 0
 		});
-		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
+		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 10) || (navigator.userAgent.indexOf('Firefox') > 0)){
 			window.scroll(0, 0);
 		}
 	});
@@ -71,9 +71,10 @@ $(document).ready(function(){
 		$("body").animate({
 			scrollTop : positionArr[index]
 		});
-		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
+		if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) > 5) || (navigator.userAgent.indexOf('Firefox') > 0)){
 			window.scroll(0, positionArr[index]);
 		}
+
 		scrollIndex = index;
 		$('.slide-item').each(function(){
 			this.className = "slide-item";
@@ -85,7 +86,7 @@ $(document).ready(function(){
 	$(window).on('scroll', function(e){
 		var scrollTop = $(window).scrollTop(),
 			direction = CaculateDirection(scrollTop),
-			isReady = scrollTop >= 650, // 是否可以切换fixed
+			isReady = scrollTop >= 1276, // 是否可以切换fixed
 			nextPosition, prevPosition;
 
 		if(isReady != ready_tmp){
@@ -95,26 +96,22 @@ $(document).ready(function(){
 
 		if(isReady && ready_status){
 
-			if(navigator.userAgent.indexOf("6.0") > 0){
+			right_slider.css({
+				"position" : "fixed",
+				"top" : 50
+			});
+			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
 				right_slider.addClass('ie6fixedTL');
-			}
-			else{
-				right_slider.css({
-					"position" : "fixed",
-					"top" : 50
-				});
 			}
 			ready_status = false;
 		}
 		else if(!isReady && ready_status){
+			right_slider.css({
+				"position": "absolute",
+				"top": "1276px"
+			});
 			if((parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf('MSIE') + 5, navigator.userAgent.indexOf('MSIE') + 8)) < 7) || (navigator.userAgent.indexOf('Firefox') > 0)){
 				right_slider.removeClass('ie6fixedTL');
-			}
-			else {
-				right_slider.css({
-					"position": "absolute",
-					"top": "695px"
-				});
 			}
 			ready_status = false;
 		}
