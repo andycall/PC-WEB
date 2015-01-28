@@ -5,15 +5,15 @@
     margin-left: -500px;
     width: 1000px;
     height: 450px;
-    background: url("../150115_PC/test_bg.jpg") no-repeat 0 bottom;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/test_bg.jpg") no-repeat 0 bottom;
 }
 .bg_left{
     position: absolute;
     width: 341px;
     height: 400px;
     left: -52px;
-    bottom: -22px;
-    background: url("../150115_PC/test_left.png") no-repeat;
+    bottom: -54px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/test-left.png") no-repeat;
 }
 .bg_right{
     position: absolute;
@@ -21,7 +21,7 @@
     height: 390px;
     right: -48px;
     bottom: -52px;
-    background: url("../150115_PC/test_right.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/test-right.png") no-repeat;
 }
 .b-test h2{
     padding-top: 28px;
@@ -57,13 +57,15 @@
     width: 22px;
     height: 22px;
     margin-right: 22px;
-    background: url("../150115_PC/icon.png") no-repeat -14px -74px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon.png") no-repeat -14px -74px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon_ie.png") no-repeat -14px -74px;
 }
 .test_content .question .subject .active{
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url("../150115_PC/icon.png") no-repeat -14px -10px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon.png") no-repeat -14px -10px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon_ie.png") no-repeat -14px -10px;
 }
 .test_content .next{
     position: relative;
@@ -81,4 +83,45 @@
 }
 .test_content .last{
     margin-left: -240px;
+}
+
+.test-result {
+    width: 400px;
+    margin: 0 auto;
+    min-height: 448px;
+}
+
+.test-result h1{
+    font-size: 36px;
+    color: #af891d;
+    text-align: center;
+    line-height: 85px;
+}
+.test-result .result-img{
+    position: relative;
+}
+.test-result .result-img .mask{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    font: 24px/50px "microsoft yahei";
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/result_mask.png") no-repeat;
+}
+.test-result img{
+    display: block;
+    width: 400px;
+    height: 240px;
+}
+
+.test-result .content {
+    margin-top: 28px;
+}
+
+.test-result .content p{
+    font-size: 20px;
+    color: #000;
+    line-height: 1.5;
+    text-align: center;
 }

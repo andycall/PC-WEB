@@ -21,15 +21,13 @@ $(document).ready(function(){
         elementCache.appendChild($(elementStr)[0]);
     });
     $('.island-list').html(elementCache);
-	var placeicon = $('.map_placeicon');
 
+    var placeicon = $('.map_placeicon');
     var island_item = $('.island-item');
     var isExplorer = /msie [\w.]+/;
     var docMode = document.documentMode;
     var image_url = island_item.find('.map_placeicon').css('background-image');
     var isOldIE = isExplorer.exec (navigator.userAgent.toLowerCase ()) && (! docMode || docMode <= 7);
-
-
 
     if(isOldIE){
         image_url.replace('place.png', 'place_ie.png');
@@ -40,11 +38,11 @@ $(document).ready(function(){
     island_item.on('click', function(e){
         var target = e.target;
         if(target.className != 'map_placeicon'){
-			while(target.className != 'island-item') target = target.parentNode;
-			target = $(target).find('.map_placeicon')[0];
-		}
+            while(target.className != 'island-item') target = target.parentNode;
+            target = $(target).find('.map_placeicon')[0];
+        }
 
-		placeicon.each(function(index){
+        placeicon.each(function(index){
             $(this).css({
                 'background-image' : image_url
             });
@@ -67,7 +65,5 @@ $(document).ready(function(){
         $('.place-icon').html(title);
         $('.content_image').attr('src', image);
     });
-
-
 
 });

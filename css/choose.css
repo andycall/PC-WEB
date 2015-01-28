@@ -17,8 +17,8 @@
     position: relative;
     width: 1000px;
     height: 499px;
-    background: url("../150115_PC/choose_bg.png") repeat-x;
-    _background: url("../150115_PC/choose_bg_ie.png") repeat-x;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg.png") repeat-x;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_ie.png") repeat-x;
 }
 .b-choice .notice .left-bg,
 .b-choice .notice .right-bg{
@@ -27,15 +27,15 @@
     top: 91px;
     width: 1px;
     height: 499px;
-    background: url("../150115_PC/choose_bg_01.png") no-repeat;
-    _background: url("../150115_PC/choose_bg_01_ie.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_01.png") no-repeat;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/choose_bg_01_ie.png") no-repeat;
 }
 .b-choice .notice .right-bg{
     left: 999px;
 }
 .b-choice .notice .notice-tit{
-    height: 91px;
-}
+     height: 91px;
+ }
 .b-choice .notice .notice-tit li{
     position: relative;
     float: left;
@@ -77,8 +77,8 @@
     left: 1px;
     width: 150px;
     height: 100px;
-    background: url("../150115_PC/tab_bg.png") no-repeat;
-    _background: url("../150115_PC/tab_bg_ie.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat;
 }
 .b-choice .notice .notice-tit .month{
     background-position: -36px -7px;
@@ -114,11 +114,13 @@
     font: 18px/30px "microsoft yahei";
 }
 .b-choice .notice .main-content .partner{
-    width: 62px;
-    padding-left: 23px;
-    background: url("../150115_PC/icon.png") no-repeat -14px -145px;
+    display: inline-block;
+    padding: 3px 20px;
+    background-color: #ff9d94;
 }
 .b-choice .notice .main-content .path{
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon.png") no-repeat -94px -145px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/icon_ie.png") no-repeat -94px -148px;
     padding-left: 20px;
 }
 .b-choice .notice .main-content .info{

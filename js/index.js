@@ -86,17 +86,13 @@ $(document).ready(function(){
         return sendShare;
     })();
 
-
     /*******  将所有的对象提前声明， 包括document对象缓存  ********/
 
     var $next = $("#next");
     var $share = $("#share");
-    var $choice = $("#choice");
-/*    var $retest = $("#retest");*/
 
     var $headerinfo = $('.header-info');
     var $shareDialog = $(".dialog-share");
-    var $testcontent = $('#test_content');
     var $resultcontent = $('#result-content');
     var $dialogmask = $('#dialog-mask');
     var $question = $('#question');
@@ -141,7 +137,6 @@ $(document).ready(function(){
 
             if(is_equal){
                 var nameArr = _.keys(this.result);
-                /*index = parseInt((nameArr.length - 1) * Math.random());*/
                 index = 0;
                 return nameArr[index];
             }
@@ -176,16 +171,6 @@ $(document).ready(function(){
 
     }
 
-    /***** 模板快 end ****/
-    //
-    //$choice.on(' click', function(e){
-    //    e.preventDefault();
-    //    $(this).parents('.describtion').hide();
-    //    $testcontent.show();
-    //
-    //});
-
-    /***  事件处理 ****/
 
     $('body').delegate(".retest"," click",function(e){
         e.preventDefault();
@@ -220,7 +205,6 @@ $(document).ready(function(){
             return;
         }
         $dialogmask.show();
-        //$testbg.hide();
         return false;
     });
 
@@ -229,9 +213,9 @@ $(document).ready(function(){
         var type = $(e.target).attr('data-type');
         pop_share(type,  {
             title:'最适合我的海岛竟然是 '
-            + exersize_result[best]['name']
-            + exersize_result[best]['share']
-            +'  小伙伴们表羡慕嫉妒恨啦！一起来测测吧！~ @去哪儿攻略 @去哪儿网'
+                + exersize_result[best]['name']+'！'
+                + exersize_result[best]['share']
+                +'  小伙伴们表羡慕嫉妒恨啦！一起来测测吧！~ @去哪儿攻略 @去哪儿网'
         });
         $dialogmask.hide();
         $testbg.hide();

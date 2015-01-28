@@ -1,6 +1,6 @@
 .b-map{
     position: relative;
-    top: 60px;
+    top:80px;
     left: 50%;
     margin-left: -505px;
     width: 1011px;
@@ -15,9 +15,8 @@
     position: relative;
     width: 1011px;
     height: 439px;
-    background: url("../150115_PC/map.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/map.png") no-repeat;
 }
-
 .island-item{
     position: absolute;
     width: 60px;
@@ -26,7 +25,6 @@
     top: 200px;
     cursor: pointer;
 }
-
 .island-item a{
     display: block;
     text-decoration: none;
@@ -36,9 +34,9 @@
     line-height: 20px;
     position: absolute;
     z-index: 100;
-    background: url("../150115_PC/mapplace_bg.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/mapplace_bg.png") repeat-x;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/mapplace_bg_ie.png") repeat-x;
 }
-
 .island-item .map_placeicon{
     position: absolute;
     z-index: 1000;
@@ -46,10 +44,9 @@
     bottom: -8px;
     width: 16px;
     height: 26px;
-    background: url("../150115_PC/place.png") no-repeat;
-    _background: url("../150115_PC/place_ie.png") no-repeat;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/place.png") no-repeat;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/place_ie.png") no-repeat;
 }
-
 .dialog-map{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -64,10 +61,10 @@
     display: block;
     padding-left: 10px;
     text-indent: 25px;
-    background: url("../150115_PC/icon2.png") no-repeat;
-    background-position: 10px 50%;
+    font-size: 24px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -13px -1019px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -13px -1019px;
 }
-
 .dialog-map .content{
     position: relative;
     width: 100%;
@@ -85,17 +82,15 @@
     margin: 0 auto;
     font-size: 12px;
     padding-bottom: 46px;
-    color: #000;
+    color: #333;
     word-break: break-all;
-    line-height: 1.5;
+    line-height: 20px;
 }
 
-.dialog-map .content a{
+.dialog-map .content .forMore{
     position: absolute;
-    display: block;
     bottom: 20px;
-    right: 10px;
+    right: 18px;
     color: #01a5af;
     text-decoration: none;
-
 }
