@@ -21,18 +21,23 @@ $(document).ready(function(){
         elementCache.appendChild($(elementStr)[0]);
     });
     $('.island-list').html(elementCache);
+	var placeicon = $('.map_placeicon');
 
-    var island_item = $('.map_placeicon');
-    var image_url = island_item.css('background-image');
+    var island_item = $('.island-item');
+    var image_url = island_item.find('.map_placeicon').css('background-image');
 
-    island_item.eq(0).css({'background-image' : image_url.replace('place.png', 'place2.png')});
+	placeicon.eq(0).css({'background-image' : image_url.replace('place.png', 'place2.png')});
 
     island_item.on('click', function(e){
         var target = e.target;
-        if(target.nodeName != 'LI') target = target.parentNode;
+        if(target.className != 'map_placeicon'){
+			while(target.className != 'island-item') target = target.parentNode;
+			target = $(target).find('.map_placeicon')[0];
+		}
 
+		console.log(target);
 
-        island_item.each(function(index){
+		placeicon.each(function(index){
             $(this).css({
                 'background-image' : image_url
             });
