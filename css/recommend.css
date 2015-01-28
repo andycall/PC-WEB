@@ -49,13 +49,13 @@
     color: #000;
 }
 .b-recommend .dialog{
-    position: relative;
-    left: 50%;
-    margin-left: -500px;
+    position: absolute;
+    /*left: 50%;*/
+    /*margin-left: -500px;*/
     display: none;
-    width: 1020px;
-    height: 800px;
-    top: -800px;
+    /*width: 1020px;*/
+    /*height: 800px;*/
+    /*top: -800px;*/
     background: url("../150115_PC/recommend-bg.png") repeat;
 }
 .b-recommend .dialog a{
@@ -65,10 +65,10 @@
     color:#ff8a00;
 }
 .b-recommend .dialog .island-info{
-    position: relative;
-    top: 124px;
-    left: 50%;
-    margin-left: -430px;
+    position: absolute;
+    /*top: 124px;*/
+    /*left: 50%;*/
+    /*margin-left: -430px;*/
     width: 860px;
     height: 500px;
     background: #fff;
