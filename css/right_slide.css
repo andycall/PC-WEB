@@ -39,8 +39,8 @@
     padding-left: 3px;
     width: 135px;
     font: 14px/24px "microsoft yahei";
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/right-slide_01.png") no-repeat;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/right-slide_ie_01.png") no-repeat;
+    background: url("../150115_PC/right-slide_01.png") no-repeat;
+    _background: url("../150115_PC/right-slide_ie_01.png") no-repeat;
 }
 .e-rightslide .slide-list .slide-item{
     width: 98px;
@@ -65,8 +65,8 @@
 }
 .e-rightslide .slide-list .two-dimension-code{
     height: 142px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/right-slide_02.png") no-repeat;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/right-slide_ie_02.png") no-repeat;
+    background: url("../150115_PC/right-slide_02.png") no-repeat;
+    _background: url("../150115_PC/right-slide_ie_02.png") no-repeat;
 }
 .e-rightslide .slide-list .two-dimension-code a{
     height: 95px;

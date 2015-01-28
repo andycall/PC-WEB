@@ -32,8 +32,8 @@ img{
     z-index: 1;
     width: 100px;
     height: 125px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -60px -800px;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -60px -800px;
+    background: url("../150115_PC/tab_bg.png") no-repeat -60px -800px;
+    _background: url("../150115_PC/tab_bg_ie.png") no-repeat -60px -800px;
 }
 .b-header .head-img{
     width: 160px;

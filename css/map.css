@@ -15,7 +15,7 @@
     position: relative;
     width: 1011px;
     height: 439px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/map.png") no-repeat;
+    background: url("../150115_PC/map.png") no-repeat;
 }
 .island-item{
     position: absolute;
@@ -34,8 +34,8 @@
     line-height: 20px;
     position: absolute;
     z-index: 100;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/mapplace_bg.png") repeat-x;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/mapplace_bg_ie.png") repeat-x;
+    background: url("../150115_PC/mapplace_bg.png") repeat-x;
+    _background: url("../150115_PC/mapplace_bg_ie.png") repeat-x;
 }
 .island-item .map_placeicon{
     position: absolute;
@@ -44,8 +44,8 @@
     bottom: -8px;
     width: 16px;
     height: 26px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/place.png") no-repeat;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/place_ie.png") no-repeat;
+    background: url("../150115_PC/place.png") no-repeat;
+    _background: url("../150115_PC/place_ie.png") no-repeat;
 }
 .dialog-map{
     box-sizing: border-box;
@@ -62,8 +62,8 @@
     padding-left: 10px;
     text-indent: 25px;
     font-size: 24px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -13px -1019px;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -13px -1019px;
+    background: url("../150115_PC/tab_bg.png") no-repeat -13px -1019px;
+    _background: url("../150115_PC/tab_bg_ie.png") no-repeat -13px -1019px;
 }
 .dialog-map .content{
     position: relative;

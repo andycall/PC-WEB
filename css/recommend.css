@@ -56,7 +56,7 @@
     width: 1020px;
     height: 800px;
     top: -800px;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/recommend-bg.png") repeat;
+    background: url("../150115_PC/recommend-bg.png") repeat;
 }
 .b-recommend .dialog a{
     color: #000;
@@ -81,8 +81,8 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -7px -949px;
-    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
+    background: url("../150115_PC/tab_bg.png") no-repeat -7px -949px;
+    _background: url("../150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
 }
 .b-recommend .dialog .island-info h2{
     font: 36px/40px "microsoft yahei";
