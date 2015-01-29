@@ -28,19 +28,21 @@ $(document).ready(function(){
     var docMode = document.documentMode;
     var image_url = island_item.find('.map_placeicon').css('background-image');
     var isOldIE = isExplorer.exec (navigator.userAgent.toLowerCase ()) && (! docMode || docMode <= 7);
+    var active_place;
+
 
     if(isOldIE){
-        image_url.replace('place.png', 'place_ie.png');
+        image_url = image_url.replace('place.png', 'place_ie.png');
     }
 
     placeicon.eq(0).css({'background-image' : image_url.replace('place', 'place2')});
+    active_place = 0;
 
-    island_item.on('mouseenter', function(e){
+    island_item.on('hover', function(e){
         showmap(e,0);
     });
 
     island_item.on('click',function(e){
-        island_item.unbind("mouseenter");
         showmap(e,1);
     });
 
@@ -51,6 +53,8 @@ $(document).ready(function(){
             target = $(target).find('.map_placeicon')[0];
         }
 
+        var parent_index = $(target).parents('.island-item').index();
+
         placeicon.each(function(index){
             $(this).css({
                 'background-image' : image_url
@@ -60,10 +64,11 @@ $(document).ready(function(){
         var background_swap = image_url.replace('place', 'place2');
 
         if(flag){
-            $(target).css({
-                'background-image' : background_swap
-            });
+            active_place = parent_index;
         }
+        island_item.eq(active_place).find(".map_placeicon").css({
+            'background-image' : background_swap
+        });
 
         var title = $(target).parents(".island-item").find('a').html();
         var content = $(target).parents(".island-item").attr('data-content');
