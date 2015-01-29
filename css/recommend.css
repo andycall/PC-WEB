@@ -50,13 +50,14 @@
 }
 .b-recommend .dialog{
     position: absolute;
-    /*left: 50%;*/
-    /*margin-left: -500px;*/
+    left: 50%;
+    margin-left: -500px;
+    top:50%;
+    margin-top: -323px;
     display: none;
-    /*width: 1020px;*/
-    /*height: 800px;*/
-    /*top: -800px;*/
-    background: url("../150115_PC/recommend-bg.png") repeat;
+    width: 1020px;
+    height: 800px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/recommend-bg.png") repeat;
 }
 .b-recommend .dialog a{
     color: #000;
@@ -65,10 +66,10 @@
     color:#ff8a00;
 }
 .b-recommend .dialog .island-info{
-    position: absolute;
-    /*top: 124px;*/
-    /*left: 50%;*/
-    /*margin-left: -430px;*/
+    position: relative;
+    top: 124px;
+    left: 50%;
+    margin-left: -430px;
     width: 860px;
     height: 500px;
     background: #fff;
@@ -81,8 +82,8 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-    background: url("../150115_PC/tab_bg.png") no-repeat -7px -949px;
-    _background: url("../150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
+    background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg.png") no-repeat -7px -949px;
+    _background: url("http://source.qunar.com/site/images/zhuanti/travel/150115_PC/tab_bg_ie.png") no-repeat -7px -949px;
 }
 .b-recommend .dialog .island-info h2{
     font: 36px/40px "microsoft yahei";
@@ -104,9 +105,10 @@
     display: block;
     width: 80px;
     height: 80px;
-    border-radius: 40px;
+    border-radius: 41px;
     margin:0 auto;
     padding-top: 6px;
+    border: 1px solid #fff;
 }
 .b-recommend .dialog .island-info .introduce .writer-space .name{
     display: block;
