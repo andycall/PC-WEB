@@ -34,8 +34,8 @@
     left: 999px;
 }
 .b-choice .notice .notice-tit{
-    height: 91px;
-}
+     height: 91px;
+ }
 .b-choice .notice .notice-tit li{
     position: relative;
     float: left;
@@ -114,11 +114,13 @@
     font: 18px/30px "microsoft yahei";
 }
 .b-choice .notice .main-content .partner{
-    width: 62px;
-    padding-left: 23px;
-    background: url("../150115_PC/icon.png") no-repeat -14px -145px;
+    display: inline-block;
+    padding: 3px 20px;
+    background-color: #ff9d94;
 }
 .b-choice .notice .main-content .path{
+    background: url("../150115_PC/icon.png") no-repeat -94px -145px;
+    _background: url("../150115_PC/icon_ie.png") no-repeat -94px -148px;
     padding-left: 20px;
 }
 .b-choice .notice .main-content .info{

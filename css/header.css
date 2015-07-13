@@ -1,6 +1,9 @@
 img{
     vertical-align: middle;
 }
+.iefix{
+    vertical-align: baseline;
+}
 .container{
     position: relative;
     width: 100%;
@@ -47,15 +50,10 @@ img{
     line-height: 19px;
 }
 .b-header .mark{
-    position: absolute;
-    top: 5px;
-    left: 152px;
-    width: 70px;
-    height: 18px;
-    line-height: 18px;
     padding: 3px 10px;
     background: #f6805a;
     font-size: 14px;
+    margin-left: 38px;
 }
 .b-header .introduce{
     position: absolute;
@@ -66,7 +64,7 @@ img{
     line-height: 19px;
     overflow: hidden;
 }
-.b-header .essay{
+.b-header .article{
     position: absolute;
     top: 196px;
     left: 24px;
@@ -75,6 +73,6 @@ img{
     line-height: 24px;
     overflow: hidden;
 }
-.b-header .essay span{
+.b-header .article span{
     color: #ffe08a;
 }

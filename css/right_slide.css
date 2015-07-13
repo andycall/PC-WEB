@@ -1,17 +1,35 @@
-
 /* 除IE6浏览器的通用方法 */
-.ie6fixedTL{position:fixed;right:100px;top:695px;}
-.ie6fixedBR{position:fixed;right:0;bottom:0}
+.ie6fixedTL{
+    position:fixed;
+    right:40px;
+    top:695px;
+}
+.ie6fixedBR{
+    position:fixed;
+    right:0;
+    bottom:0
+}
 /* IE6浏览器的特有方法 */
 /* 修正IE6振动bug */
-* html,* html body{background-image:url(about:blank);background-attachment:fixed}
-* html .ie6fixedTL{position:absolute;left:expression(eval(document.documentElement.scrollRight));top:expression(eval(document.documentElement.scrollTop + 50))}
-* html .ie6fixedBR{position:absolute;left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))}
+* html,* html body{
+    background-image:url(about:blank);
+    background-attachment:fixed;
+}
+* html .ie6fixedTL{
+    position:absolute;
+    left:expression(eval(document.documentElement.scrollRight));
+    top:expression(eval(document.documentElement.scrollTop + 50));
+}
+* html .ie6fixedBR{
+    position:absolute;
+    left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+    top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
 
 .e-rightslide{
     position: absolute;
-    top: 695px;
-    right: 100px;
+    top: 1276px;
+    right: 29px;
     width: 100px;
     height: 100px;
     z-index: 10000;
@@ -22,6 +40,7 @@
     width: 135px;
     font: 14px/24px "microsoft yahei";
     background: url("../150115_PC/right-slide_01.png") no-repeat;
+    _background: url("../150115_PC/right-slide_ie_01.png") no-repeat;
 }
 .e-rightslide .slide-list .slide-item{
     width: 98px;
@@ -47,6 +66,7 @@
 .e-rightslide .slide-list .two-dimension-code{
     height: 142px;
     background: url("../150115_PC/right-slide_02.png") no-repeat;
+    _background: url("../150115_PC/right-slide_ie_02.png") no-repeat;
 }
 .e-rightslide .slide-list .two-dimension-code a{
     height: 95px;

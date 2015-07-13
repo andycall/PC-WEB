@@ -1,6 +1,6 @@
 .b-map{
     position: relative;
-    top: 60px;
+    top:80px;
     left: 50%;
     margin-left: -505px;
     width: 1011px;
@@ -17,17 +17,14 @@
     height: 439px;
     background: url("../150115_PC/map.png") no-repeat;
 }
-
 .island-item{
     position: absolute;
-    background: url("../150115_PC/place.png") no-repeat;
     width: 60px;
     height: 44px;
     left: 200px;
     top: 200px;
     cursor: pointer;
 }
-
 .island-item a{
     display: block;
     text-decoration: none;
@@ -36,11 +33,21 @@
     text-align: center;
     line-height: 20px;
     position: absolute;
-    z-index: 10000;s
+    z-index: 100;
+    background: url("../150115_PC/mapplace_bg.png") repeat-x;
+    _background: url("../150115_PC/mapplace_bg_ie.png") repeat-x;
 }
-
-
-.dialog{
+.island-item .map_placeicon{
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    bottom: -8px;
+    width: 16px;
+    height: 26px;
+    background: url("../150115_PC/place.png") no-repeat;
+    _background: url("../150115_PC/place_ie.png") no-repeat;
+}
+.dialog-map{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -49,43 +56,41 @@
     min-height: 384px;
     left: 5px;
 }
-.dialog .name .place-icon{
+.dialog-map .name .place-icon{
     line-height: 50px;
     display: block;
     padding-left: 10px;
     text-indent: 25px;
-    background: url("../150115_PC/icon2.png") no-repeat;
-    background-position: 10px 50%;
+    font-size: 24px;
+    background: url("../150115_PC/tab_bg.png") no-repeat -13px -1019px;
+    _background: url("../150115_PC/tab_bg_ie.png") no-repeat -13px -1019px;
 }
-
-.dialog .content{
+.dialog-map .content{
     position: relative;
     width: 100%;
 }
-.dialog .content img{
+.dialog-map .content img{
     width: 170px;
     height: 128px;
     margin: 15px auto 15px auto;
     display: block;
 }
 
-.dialog .content .essay{
+.dialog-map .content .map_essay{
     width: 170px;
     min-height: 132px;
     margin: 0 auto;
     font-size: 12px;
     padding-bottom: 46px;
-    color: #000;
+    color: #333;
     word-break: break-all;
-    line-height: 1.5;
+    line-height: 20px;
 }
 
-.dialog .content a{
+.dialog-map .content .forMore{
     position: absolute;
-    display: block;
     bottom: 20px;
-    right: 10px;
+    right: 18px;
     color: #01a5af;
     text-decoration: none;
-
 }

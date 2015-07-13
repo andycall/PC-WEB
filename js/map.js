@@ -1,34 +1,85 @@
 $(document).ready(function(){
 
-	var elementCache = document.createDocumentFragment();
-	$.each(place, function(index, value){
-		if(index == 0) {
-			$('.map_essay').html(value['content']);
-			$('.forMore').attr('href', value['moreHref']);
-			$('.place-icon').html(value['title']);
-			$('.content_image').attr('src', value['image']);
-		}
+    var elementCache = document.createDocumentFragment();
 
-		var elementStr =
-			'<li style="top: ' + value['top'] +'px; left: ' + value['left' ]+'px;" class="island-item" data-image="' + value['image'] +'" data-moreHref="' + value['moreHref'] + '"  data-content="' + value['content'] +'"> ' +
-			'<a href="javascript:void(0)">' + value['title']  +'</a> ' +
-			'</li>';
+    $.each(place, function(index, value){
+        if(index == 0){
+            $('.map_essay').html(value['content']);
+            $('.forMore').attr('href', value['moreHref']);
+            $('.place-icon').html(value['title']);
+            $('.content_image').attr('src', value['image']);
+        }
 
-		elementCache.appendChild($(elementStr)[0]);
-	});
-	$('.island-list').html(elementCache);
+        var elementStr =
+            '<li style="top: ' + value['top'] +'px; left: ' + value['left' ]+'px;" class="island-item" data-image="' + value['image'] +'" data-moreHref="' + value['moreHref'] + '"  data-content="' + value['content'] +'"> ' +
+            '<div style="position: relative; width: 100%; height: 100%;">' +
+            '<a style="position: absolute; left: ' + value['font_left'] +'px; top : ' + value['font_top'] + 'px" href="javascript:void(0)">' + value['title']  +'</a> ' +
+            '<span class="map_placeicon"></span>' +
+            '</div>' +
+            '</li>';
 
-	$(".island-item").on('click', function(e){
-		var target = e.target;
-		if(target.nodeName != 'LI') target = target.parentNode;
-		var title = $(target).find('a').html();
-		var content = $(target).attr('data-content');
-		var moreHref = $(target).attr('data-moreHref');
-		var image = $(target).attr('data-image');
-		$('.map_essay').html(content);
-		$('.forMore').attr('href', moreHref);
-		$('.place-icon').html(title);
-		$('.content_image').attr('src', image);
-	});
+        elementCache.appendChild($(elementStr)[0]);
+    });
+    $('.island-list').html(elementCache);
+
+    var placeicon = $('.map_placeicon');
+    var island_item = $('.island-item');
+    var isExplorer = /msie [\w.]+/;
+    var docMode = document.documentMode;
+    var image_url = island_item.find('.map_placeicon').css('background-image');
+    var isOldIE = isExplorer.exec (navigator.userAgent.toLowerCase ()) && (! docMode || docMode <= 7);
+    var active_place;
+
+
+    if(isOldIE){
+        image_url = image_url.replace('place.png', 'place_ie.png');
+    }
+
+    placeicon.eq(0).css({'background-image' : image_url.replace('place', 'place2')});
+    active_place = 0;
+
+    island_item.on('hover', function(e){
+        showmap(e,0);
+    });
+
+    island_item.on('click',function(e){
+        showmap(e,1);
+    });
+
+    function showmap(e,flag){
+        var target = e.target;
+        if(target.className != 'map_placeicon'){
+            while(target.className != 'island-item') target = target.parentNode;
+            target = $(target).find('.map_placeicon')[0];
+        }
+
+        var parent_index = $(target).parents('.island-item').index();
+
+        placeicon.each(function(index){
+            $(this).css({
+                'background-image' : image_url
+            });
+        });
+
+        var background_swap = image_url.replace('place', 'place2');
+
+        if(flag){
+            active_place = parent_index;
+        }
+        island_item.eq(active_place).find(".map_placeicon").css({
+            'background-image' : background_swap
+        });
+
+        var title = $(target).parents(".island-item").find('a').html();
+        var content = $(target).parents(".island-item").attr('data-content');
+        var moreHref = $(target).parents(".island-item").attr('data-moreHref');
+        var image = $(target).parents(".island-item").attr('data-image');
+
+        $('.map_essay').html(content);
+        $('.pic-link').attr('href', moreHref);
+        $('.forMore').attr('href', moreHref);
+        $('.place-icon').html(title);
+        $('.content_image').attr('src', image);
+    }
 
 });
