@@ -31,10 +31,14 @@
     width: 235px;
     background: #fff;
     cursor: pointer;
+    overflow: hidden;
 }
 .b-recommend .recommend-show .line .item img{
     width: 235px;
     height: 160px;
+    position : absolute;
+    left: 0;
+    top: 0;
 }
 .b-recommend .recommend-show .line .item .writer{
     position: absolute;
